@@ -1,0 +1,57 @@
+i Champions 
+Let implement following problem statements in Java.
+
+**********Implementation of Linked List for a Customer************
+1.	Create a  objCustomerLinkedList under ImplementCustomerLinkedList
+2.	Add the following values into objCustomerLinkedList using InputBox
+a.	CustomerName
+b.	CustomerAddress
+c.	CustomerPhone
+d.	CustomerMaritalStatus
+e.	CustomerDOB
+
+3.	Retrive CustomerName and CustomerMaritalStatus
+4.	Retrive all the Values of objCustomerLinkedList using Extended For Loop
+5.	Replace CustomerPhone by CustomerMobile
+6.	Remove CustomerDOB
+
+
+
+    *********** Implement MAP for Employees *******
+
+1.	Create a  Maps of employees under ImplementEmployeeMap class as per the following structure.
+CorpKey	Name
+	Squad
+	Tribe
+�	Ask user to inserting the values into above structure, using Input Box
+2.	Ask the user if he wants to continue ? Y/N
+�	If yes then keep inserting the values for above structure by repeating Step 1
+�	If No , stop insertion of the values
+
+The Final structure should in the following format
+CorpKey of Emp1	Name of emp1
+	Squad of emp1
+	Tribe of emp1
+CorpKey of Emp2	Name of emp2
+	Squad of emp2
+	Tribe of emp2
+CorpKey of Emp3	Name of emp3
+	Squad of emp3
+	Tribe of emp3
+CorpKey of Emp4	Name of emp4
+	Squad of emp4
+	Tribe of emp4
+
+3.	Print the details of the Corp Key provided by user using Iterator interface
+Ex. : user`s input is CorpKey of Emp3 , then print 
+
+CorpKey of Emp3 :
+Name of emp3
+Squad of emp3
+Tribe of emp3
+
+4.	Ask user if he want to continue the search ?Y/N
+�	If YES then ask for corp key and print details associated with corp key
+�	If NOT , then Exit from program.
+
+

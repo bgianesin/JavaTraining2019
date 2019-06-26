@@ -1,0 +1,20 @@
+﻿Customer Number;Invoice Number;Contract Type;Contract Type Description;Charged Number;Calling Number;Origin;Called Number;Destination;Call Category;Call Type;Date;Time;Duration;Amount;Amount Incl VAT;Vat
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'1963';'Belgique';Divers;Divers;06/04/2019;15:47:46;00:00:09;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;02/04/2019;19:09:50;00:01:44;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;03/04/2019;19:19:17;00:03:00;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;05/04/2019;19:04:10;00:03:04;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;08/04/2019;19:39:32;00:01:57;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;09/04/2019;20:12:29;00:00:55;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;11/04/2019;20:15:22;00:01:08;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;13/04/2019;20:23:41;00:00:57;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;15/04/2019;20:10:21;00:02:32;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;16/04/2019;20:05:47;00:01:09;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;17/04/2019;20:21:00;00:00:56;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;20/04/2019;19:18:08;00:01:41;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;24/04/2019;20:22:00;00:01:52;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;26/04/2019;19:12:15;00:00:31;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;29/04/2019;19:08:52;00:01:37;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 235 60 04';'Belgique';Free Calls National;Nat. vers autres réseaux fixes;30/04/2019;19:34:45;00:00:41;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgique';'04 234 04 36';'Belgique';Free Calls National;Vers lignes fixes;03/04/2019;19:22:38;00:25:46;,0000;,0000;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919';'042344919';'Belgium'; ; ;Télévision;A la demande - gratuit;26/04/2019;00:00:00; ;4,1240;4,9900;21,00%
+602376841;'6936113010';'TEL';'Ligne téléphonique';'042344919'; ; ; ; ;Télévision;Ristourne;26/04/2019;00:00:00; ;-4,1240;-4,9900;21,00%

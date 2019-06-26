@@ -1,0 +1,231 @@
+package javatraining.gui;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CalcultorBen {
+
+    private JPanel jPanelBen;
+    private JLabel LabelTop;
+    private JTextField Value1;
+    private JTextField Value2;
+    private JButton doOperationButton;
+    private JRadioButton rbAdd;
+    private JRadioButton rbMoins;
+    private JRadioButton rbFoi;
+    private JRadioButton rbDiv;
+    private JTextField Value;
+    private JButton clear;
+
+    public CalcultorBen() {
+        doOperationButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Value1.setFocusable(true);
+
+                float result = 0;
+                String error = null;
+
+                if (!Value1.getText().isEmpty() && !Value2.getText().isEmpty()) {
+                    float operand1 = Integer.parseInt(Value1.getText());
+                    float operand2 = Integer.parseInt(Value2.getText());
+                    if (rbDiv.isSelected()) {
+                        try {
+                            result = operand1 / operand2;
+                        } catch (ArithmeticException ae) {
+                            JOptionPane.showMessageDialog(null, ae.getMessage());
+                        }
+                    } else if (rbFoi.isSelected()) {
+                        result = operand1 * operand2;
+                    } else if (rbAdd.isSelected()) {
+                        result = operand1 + operand2;
+                    } else if (rbMoins.isSelected()) {
+                        result = operand1 - operand2;
+                    }
+
+                    Value.setText(String.valueOf(result));
+                } else {
+                    JOptionPane.showMessageDialog(null, "Enter value of Value 1 and Value2");
+                }
+            }
+        });
+
+        clear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetValue();
+            }
+        });
+
+
+
+
+    }
+
+    public void resetValue() {
+        Value1.setText("");
+        Value2.setText("");
+        Value.setText("");
+    }
+
+    //JFrame  oBFrame = new JFrame();
+
+    public void display() {
+        JFrame frame = new JFrame();
+        frame.setContentPane(new CalcultorBen().jPanelBen);
+        frame.setBounds(500, 500, 800, 800);
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+
+        JMenuBar menubar = new JMenuBar();
+        frame.setJMenuBar(menubar);
+
+        //File category
+        JMenu lfile = new JMenu("File");
+        menubar.add(lfile);
+        JMenuItem lexit = new JMenuItem("Exit");
+        JMenuItem lclear = new JMenuItem("Clear");
+        lfile.add(lclear);
+        lfile.add(lexit);
+
+        //Edit category
+        JMenu help = new JMenu("Help");
+        menubar.add(help);
+        JMenuItem about = new JMenuItem("About");
+        help.add(about);
+
+        frame.setVisible(true);
+
+        //Exit option action listener
+        class exitAction implements ActionListener {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        }
+        lexit.addActionListener(new exitAction());
+
+        class clearAction implements ActionListener {
+            public void actionPerformed(ActionEvent e) {
+                 lclear.setEnabled(false);
+                //frame.setVisible(false);
+                //frame.
+                //resetValue();
+            }
+        }
+        lclear.addActionListener(new clearAction());
+
+
+
+        lclear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetValue();
+            }
+        });
+
+    }
+
+    public static void main(String[] args) {
+        /*JFrame frame = new JFrame();
+        frame.setContentPane(new CalcultorBen().jPanelBen);
+        frame.setBounds(200, 200, 300, 300);
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+
+        JMenuBar menubar = new JMenuBar();
+        frame.setJMenuBar(menubar);
+
+        //File category
+        JMenu file = new JMenu("File");
+        menubar.add(file);
+        JMenuItem exit = new JMenuItem("Exit");
+        JMenuItem clear = new JMenuItem("Clear");
+        file.add(clear);
+        file.add(exit);
+
+        //Edit category
+        JMenu help = new JMenu("Help");
+        menubar.add(help);
+        JMenuItem about = new JMenuItem("About");
+        help.add(about);
+        frame.setVisible(true);
+
+        //Exit option action listener
+        class exitAction implements ActionListener {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        }
+        exit.addActionListener(new exitAction());
+        */
+        CalcultorBen oCB = new CalcultorBen();
+        oCB.display();
+    }
+
+    {
+// GUI initializer generated by IntelliJ IDEA GUI Designer
+// >>> IMPORTANT!! <<<
+// DO NOT EDIT OR ADD ANY CODE HERE!
+        $$$setupUI$$$();
+    }
+
+    /**
+     * Method generated by IntelliJ IDEA GUI Designer
+     * >>> IMPORTANT!! <<<
+     * DO NOT edit this method OR call it in your code!
+     *
+     * @noinspection ALL
+     */
+    private void $$$setupUI$$$() {
+        jPanelBen = new JPanel();
+        jPanelBen.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(8, 6, new Insets(0, 0, 0, 0), -1, -1));
+        final JLabel label1 = new JLabel();
+        label1.setText("Value 1 :");
+        jPanelBen.add(label1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 3, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(103, 10), null, 1, false));
+        final JLabel label2 = new JLabel();
+        label2.setText("Value 2 :");
+        jPanelBen.add(label2, new com.intellij.uiDesigner.core.GridConstraints(4, 0, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        Value1 = new JTextField();
+        jPanelBen.add(Value1, new com.intellij.uiDesigner.core.GridConstraints(1, 1, 3, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+        Value2 = new JTextField();
+        jPanelBen.add(Value2, new com.intellij.uiDesigner.core.GridConstraints(4, 2, 1, 4, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+        doOperationButton = new JButton();
+        doOperationButton.setText("Do Operation");
+        jPanelBen.add(doOperationButton, new com.intellij.uiDesigner.core.GridConstraints(6, 2, 1, 4, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(20, 20), null, 1, false));
+        rbAdd = new JRadioButton();
+        rbAdd.setText("+");
+        jPanelBen.add(rbAdd, new com.intellij.uiDesigner.core.GridConstraints(5, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(100, 20), null, null, 3, false));
+        rbMoins = new JRadioButton();
+        rbMoins.setText("-");
+        jPanelBen.add(rbMoins, new com.intellij.uiDesigner.core.GridConstraints(5, 3, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
+        rbFoi = new JRadioButton();
+        rbFoi.setText("*");
+        jPanelBen.add(rbFoi, new com.intellij.uiDesigner.core.GridConstraints(5, 4, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        rbDiv = new JRadioButton();
+        rbDiv.setText("/");
+        jPanelBen.add(rbDiv, new com.intellij.uiDesigner.core.GridConstraints(5, 5, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        Value = new JTextField();
+        jPanelBen.add(Value, new com.intellij.uiDesigner.core.GridConstraints(7, 3, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+        LabelTop = new JLabel();
+        LabelTop.setText("Calculator Ben");
+        jPanelBen.add(LabelTop, new com.intellij.uiDesigner.core.GridConstraints(0, 3, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        clear = new JButton();
+        clear.setText("Clear");
+        jPanelBen.add(clear, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        ButtonGroup buttonGroup;
+        buttonGroup = new ButtonGroup();
+        buttonGroup.add(rbDiv);
+        buttonGroup.add(rbDiv);
+        buttonGroup.add(rbAdd);
+        buttonGroup.add(rbFoi);
+        buttonGroup.add(rbMoins);
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    public JComponent $$$getRootComponent$$$() {
+        return jPanelBen;
+    }
+
+}
